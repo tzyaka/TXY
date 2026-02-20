@@ -163,7 +163,7 @@ trackContainer.appendChild(el);
 });
 
 /* COUNTDOWN */
-const releaseDate=new Date("February 20, 2026 02:00:00").getTime();
+const releaseDate=new Date("February 20, 2026 01:20:00").getTime();
 let released=false;
 
 function updateCountdown(){
@@ -178,15 +178,15 @@ startCinematicRelease();
 return;
 }
 
-if(distance>0){
-const days=Math.floor(distance/(1000*60*60*24));
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-const seconds=Math.floor((distance%(1000*60))/1000);
+if(distance > 0){
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-const text=`${days}D ${hours}H ${minutes}M ${seconds}S UNTIL RELEASE`;
-document.getElementById("countdownNews").textContent=text;
-document.getElementById("countdownAlbum").textContent=text;
+    const text = `${days}D ${hours}H ${minutes}M ${seconds}S UNTIL RELEASE`;
+    document.getElementById("countdownNews").textContent = text;
+    document.getElementById("countdownAlbum").textContent = text;
 }
 }
 
